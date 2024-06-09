@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <h2>Temperature Conversion</h2>
+            <input type="number" id="tempInput" placeholder="Temperature in Celsius">
+            <button onclick="convertTemperature()">Convert to Fahrenheit</button>
+            <p id="tempResult"></p>
+
+            <h2>Simple Interest</h2>
+            <input type="number" id="principal" placeholder="Principal Amount">
+            <input type="number" id="rate" placeholder="Rate of Interest">
+            <input type="number" id="time" placeholder="Time in Years">
+            <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+            <p id="simpleInterestResult"></p>
+
+            <h2>Compound Interest</h2>
+            <input type="number" id="cPrincipal" placeholder="Principal Amount">
+            <input type="number" id="cRate" placeholder="Rate of Interest">
+            <input type="number" id="cTime" placeholder="Time in Years">
+            <input type="number" id="compounds" placeholder="Number of Times Interest Compounded per Year">
+            <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+            <p id="compoundInterestResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
