@@ -3,31 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Multi-Functional Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Calculator</h1>
-        <div class="calculator">
-            <h2>Temperature Conversion</h2>
-            <input type="number" id="tempInput" placeholder="Temperature in Celsius">
-            <button onclick="convertTemperature()">Convert to Fahrenheit</button>
+    <div class="calculator">
+        <h1>Multi-Functional Calculator</h1>
+        <div class="calc-section" id="temperature">
+            <h2>Temperature Converter</h2>
+            <input type="number" id="tempInput" placeholder="Enter temperature">
+            <select id="tempUnit">
+                <option value="CtoF">Celsius to Fahrenheit</option>
+                <option value="FtoC">Fahrenheit to Celsius</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
             <p id="tempResult"></p>
+        </div>
 
+        <div class="calc-section" id="simple-interest">
             <h2>Simple Interest</h2>
             <input type="number" id="principal" placeholder="Principal Amount">
             <input type="number" id="rate" placeholder="Rate of Interest">
             <input type="number" id="time" placeholder="Time in Years">
-            <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+            <button onclick="calculateSimpleInterest()">Calculate</button>
             <p id="simpleInterestResult"></p>
+        </div>
 
+        <div class="calc-section" id="cgpa">
+            <h2>CGPA Calculator</h2>
+            <input type="text" id="grades" placeholder="Enter grades separated by comma">
+            <button onclick="calculateCGPA()">Calculate</button>
+            <p id="cgpaResult"></p>
+        </div>
+
+        <div class="calc-section" id="money-converter">
+            <h2>Money Converter</h2>
+            <input type="number" id="amount" placeholder="Amount in USD">
+            <button onclick="convertMoney()">Convert</button>
+            <p id="moneyResult"></p>
+        </div>
+
+        <div class="calc-section" id="compound-interest">
             <h2>Compound Interest</h2>
-            <input type="number" id="cPrincipal" placeholder="Principal Amount">
-            <input type="number" id="cRate" placeholder="Rate of Interest">
-            <input type="number" id="cTime" placeholder="Time in Years">
-            <input type="number" id="compounds" placeholder="Number of Times Interest Compounded per Year">
-            <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+            <input type="number" id="principalCI" placeholder="Principal Amount">
+            <input type="number" id="rateCI" placeholder="Rate of Interest">
+            <input type="number" id="timeCI" placeholder="Time in Years">
+            <input type="number" id="nCI" placeholder="Number of times interest applied per time period">
+            <button onclick="calculateCompoundInterest()">Calculate</button>
             <p id="compoundInterestResult"></p>
         </div>
     </div>
